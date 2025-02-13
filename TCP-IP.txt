@@ -1,0 +1,33 @@
+TCP packet 20 Bytes size/160 bits
+
+Src Port -  2 Bytes -16 bits
+Dest Port - 2 Bytes - 16 bits
+Sequence Number -4 byte - 32 bits
+Acknowledgment Number - 4 - 32 bits
+Data Offset - 4 bits 
+Reserv -  3 bits
+Control Flags - 9 bits
+Window size - 2 bytes - 16 bits
+Checksum - 2 Bytes Bytes
+Urgant Data - 16 bytes
+Options
+Pading
+Payload
+
+IP Packet - 20 Bytes/160 bits
+Verison - 4 bits
+Header length - 4bits
+Type of service - 8 Bits
+Total length - 16
+Identificatio -16 bits - For identify fragmented packets
+Fragment Flags (3 bits):
+	Bit 0: Reserved (always 0).
+	Bit 1: Don’t Fragment (DF).
+	Bit 2: More Fragments (MF).
+Fragment Offset (13 bits):
+	Indicates the position of a fragment.
+TTL (8 bits):
+	Limits how many hops a packet can take; decrements by 1 at each hop.
+Protocol (8 bits):
+	Defines the transport layer protocol:
+	TCP = 6, UDP = 17, ICMP = 1.
