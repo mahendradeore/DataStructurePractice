@@ -21,7 +21,7 @@ LRUCache* createCache() {
     LRUCache *cache = (LRUCache*)malloc(sizeof(LRUCache));
     cache->size = 0;
     cache->head = cache->tail = NULL;
-    for (int i = 0; i < CACHE_SIZE; i++) {
+    for (int i = 0; i < HEAP_SIZE; i++) {
         cache->hashMap[i] = NULL;
     }
     return cache;
