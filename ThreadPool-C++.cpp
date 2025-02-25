@@ -6,6 +6,54 @@
 #include <functional>
 #include <chrono>
 using namespace std;
+/*
+ThreadPool Class Implementation few take aways in C++
+Need headers for thread, mutex, condition_variable, queue, functional, chrono
+1. std::mutex is used to protect shared data from
+   being simultaneously accessed by multiple threads.
+2. std::condition_variable is used to block a thread until notified to wake.
+3. std::queue is used to store the tasks that need to be executed.
+4. std::function is used to store the tasks that need to be 
+5. used vector to create thread pool
+6. using emplace_back to create thread pool used lambda function to create thread
+7. used unique_lock and condition_variable to block thread until notified
+8. used lock_guard to lock the mutex
+6. used unordered_map to store thread id and thread number
+7. used notify_one to notify one thread to wake up  
+8. used notify_all to notify all threads to wake up
+9. used join to join all threads
+10. used sleep_for to sleep thread for some time
+11. used lambda function to send function to thread pool
+12. used destructor to join all threads and stop all threads    
+
+in lamda functipn [] is used to capture the surrounding variables
+in lamda function we can pass the arguments to function
+in lamda function we can return the value from function
+in lamda function we can use the return type of function
+in lamda function we can use the return type of function
+in lamda function we can use the return type of function
+syntax of lamda function is [capture](parameters)->return_type{body}
+in lamda function we can use the return type of function
+example of lamda function is
+auto f = [](int x, int y)  int { return x + y; };
+with surrounding variables
+int x = 10;
+auto f = [x](int y) -> int { return x + y; };
+with return type
+
+direct use as argumnt   
+explain emplace and lambda function
+emplace_back is used to create thread pool  how signature of lambda function is used
+how to use lamda function in thread pool
+how to use lamda function in thread pool    
+as below with signature and used 
+std::this_thread 
+
+
+
+
+
+*/ 
 
 class ThreadPool {
 
